@@ -7,9 +7,7 @@ RegisterCommand('restart', function()
         while i >= 5 do
             msg[2] = tostring(i)
 
-            args = { msg[1], msg[2], msg[3] }
-
-            TriggerServerEvent('SendMsg:Server', args)
+            TriggerServerEvent('SendMsg:Server', msg[1]..' '..msg[2]..' '..msg[3])
 
             if i ~= 5 then
                 Citizen.Wait(300000)
@@ -26,9 +24,7 @@ RegisterCommand('restart', function()
 
                     msg[2] = tostring(i)
 
-                    args = { msg[1], msg[2], msg[3] }
-
-                    TriggerServerEvent('SendMsg:Server', args)
+                    TriggerServerEvent('SendMsg:Server', msg[1]..' '..msg[2]..' '..msg[3])
                     Citizen.Wait(60000)
                     i = i - 1
 
