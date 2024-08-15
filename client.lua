@@ -1,8 +1,8 @@
 RegisterCommand('restart', function()
     Citizen.CreateThread(function()
-        local i = 15
         local msg = { 'Сервер перезагрузится через', tostring(i), 'минут!' }
         local args
+        local i = Config.Restart.Minutes
 
         while i >= 5 do
             msg[2] = tostring(i)
